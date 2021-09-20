@@ -16,4 +16,8 @@ def create_app(config_name):
     bootstrap.init_app(app)
     db.init_app(app)
 
+    # Registering blueprint
+    from .auth import auth as auth_blueprint
+    app.register_blueprint(auth_blueprint, url_prefix = '/authenticate')
+
     return app
