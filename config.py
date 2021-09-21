@@ -1,12 +1,20 @@
+import os
 
 from flask_sqlalchemy import SQLAlchemy
-
 
 class Config:
     '''
     General configuration parent class
     '''
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://royrasugu:12345@localhost/pitches'
+    UPLOADED_PHOTOS_DEST = 'app/static/photos'
+
+    # email configurations
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USER_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 class ProdConfig(Config):
     # '''
