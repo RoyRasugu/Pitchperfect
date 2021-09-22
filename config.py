@@ -6,7 +6,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://royrasugu:12345@localhost/pitches'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://royrasugu:qwerty@localhost/pitches'
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
     # email configurations
